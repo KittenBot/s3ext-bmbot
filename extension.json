@@ -4,5 +4,5 @@
     "extensions": ["BMBot"],
     "image": "bmbot.png",
     "hex": "bmbot.hex",
-    "arduinolib": "bmbot"
+    "factory": "arduinolib/bmbot/examples/bmbot4kittenblock/bmbot4kittenblock.ino"
 }
