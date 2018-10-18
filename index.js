@@ -3,7 +3,7 @@
  */
 const ArgumentType = Scratch.ArgumentType;
 const BlockType = Scratch.BlockType;
-const formatMessage = require('format-message');
+const formatMessage = Scratch.formatMessage;
 const log = Scratch.log;
 
 const hexToRgb = function (hex) {
