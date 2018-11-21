@@ -59,7 +59,8 @@ class BMBot {
             const lines = this.lineBuffer.split('\n');
             this.lineBuffer = lines.pop();
             for (const l of lines){
-                if (this.reporter) this.reporter(l);
+                const ret = this.parseCmd(l)
+                if (this.reporter) this.reporter(ret);
             }
         }
     }
@@ -326,7 +327,7 @@ class BMBot {
     }
 
     infrarx (){
-        return this.report(`M303\r\n`).then(ret => this.parseCmd(ret));
+        return this.report(`M303\r\n`);
     }
 
     rgb (args){
@@ -335,11 +336,11 @@ class BMBot {
     }
 
     button (){
-        return this.report(`M305\r\n`).then(ret => this.parseCmd(ret));
+        return this.report(`M305\r\n`);
     }
 
     linefollow (){
-        return this.report(`M306\r\n`).then(ret => this.parseCmd(ret));
+        return this.report(`M306\r\n`);
     }
 
     buzzer (args){
@@ -347,15 +348,15 @@ class BMBot {
     }
 
     ultrasonic (){
-        return this.report(`M308\r\n`).then(ret => this.parseCmd(ret));
+        return this.report(`M308\r\n`);
     }
 
     lightsensor (){
-        return this.report(`M301\r\n`).then(ret => this.parseCmd(ret));
+        return this.report(`M301\r\n`);
     }
 
     soundsensor (){
-        return this.report(`M302\r\n`).then(ret => this.parseCmd(ret));
+        return this.report(`M302\r\n`);
     }
 
 
