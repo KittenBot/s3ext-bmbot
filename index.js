@@ -68,7 +68,7 @@ class BMBot {
     onclose (error){
         log.warn('on close', error);
         this.session = null;
-        this.runtime.emit(this.runtime.constructor.PERIPHERAL_ERROR);
+        this.runtime.emit(this.runtime.constructor.PERIPHERAL_DISCONNECT_ERROR);
     }
 
     // method required by vm runtime
